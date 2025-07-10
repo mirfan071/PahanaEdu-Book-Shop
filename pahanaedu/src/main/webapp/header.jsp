@@ -23,7 +23,7 @@
 
 <nav class="custom-navbar">
   <div class="nav-container">
-    <a class="brand" href="#">
+    <a class="brand" href="mainInterface.jsp">
       <img src="images/logo.png" alt="Logo" class="logo">
       <span>Pahana Edu Book Shop</span>
     </a>
@@ -49,12 +49,22 @@
           <a href="addBill">Add New Bill</a>
           <a href="viewSales">View Sales</a>
         </div>
-      </li>
+      </li>              
+     
     </ul>
 
     <ul class="nav-right">
-      <li><span class="user-info"> Logged User: <%= username %></span></li>
+     
       <li><a class="logout-link" href="logOut.jsp">	 Logout</a></li>
+    </ul>
+    
+       <ul class="nav-right">
+          <li><a class="help-link" href="Help.jsp">&nbsp Help &nbsp </a></li>
+ 	   </ul>
+ 	   
+ 	   <ul class="nav-right">
+      <li><span class="user-info1"> Logged User: <%= username.toUpperCase() %> : <%=role %></span></li>
+      
     </ul>
   </div>
 </nav>

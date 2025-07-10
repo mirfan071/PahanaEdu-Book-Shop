@@ -1,6 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="model.user" %>
-
+<%
+    String admin = (String) session.getAttribute("admin");
+    if (admin == null || !"admin".equalsIgnoreCase(admin)) {
+        response.sendRedirect("userLogin.jsp");
+        return;
+    }
+%>
 <%
     user u = (user) request.getAttribute("user");
     if (u == null) {
@@ -8,6 +14,7 @@
         return;
     }
 %>
+
 
 <!DOCTYPE html>
 <html>
@@ -17,9 +24,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container-login">
         <h2>Update User</h2>
-        <form action="updateUsers	" method="post">
+        <form action="updateUsers" method="post">
             <input type="hidden" name="id" value="<%= u.getId() %>">
             
             <div class="form-group">

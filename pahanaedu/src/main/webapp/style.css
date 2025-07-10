@@ -16,17 +16,59 @@ body {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
+   align-items: center; 
+}
+
+.container-login {
+  width: 50%;
+  min-width: 200px;
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  align-items: center; 
+  
+}
+
+.container-login form input[type="text"],
+.container-login form input[type="password"],
+.container-login form input[type="email"],
+.container-login form select {
+  width: 100%; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.container-login form button {
+  display: block;
+  margin: 20px auto 0 auto; 
+  padding: 10px 20px;
+  background-color: #30ce0d; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  
+  &:hover{
+    background-color: #74ee58; 
+  }
 }
 
 .container form {
   display: flex;
   flex-direction: column;
-  align-items: center; /* center horizontally */
+  align-items: center; 
 }
 
 .container form .form-group {
-  width: 100%; /* make form-groups full width inside container */
-  max-width: 320px; /* optional, to limit input width */
+  width: 100%; 
+  max-width: 320px; 
   margin-bottom: 20px;
 }
 
@@ -34,14 +76,14 @@ body {
   display: block;
   margin-bottom: 6px;
   color: #555;
-  text-align: center; /* center label text */
+  text-align: center; 
 }
 
 .container form input[type="text"],
 .container form input[type="password"],
 .container form input[type="email"],
 .container form select {
-  width: 100%; /* full width of form-group */
+  width: 100%; 
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -54,7 +96,7 @@ body {
 }
 
 .blue-button {
-    background-color: #007bff;  /* blue color */
+    background-color: #007bff;  
     color: white;
     border: none;
     padding: 10px 20px;
@@ -65,13 +107,13 @@ body {
 }
 
 .blue-button:hover {
-    background-color: #0056b3;  /* darker blue on hover */
+    background-color: #0056b3;  
 }
 
 h2 {
 text-align: center;
 color: white;
-background-color: #007bff; /* Bootstrap blue */
+background-color: #007bff; 
 padding: 15px 20px;
 border-radius: 8px;
 margin-bottom: 20px;
@@ -114,7 +156,7 @@ button:hover {
 .action-buttons {
     display: flex;
     justify-content: center;
-    gap: 5px; /* space between buttons */
+    gap: 5px; 
 }
 
 .btn-edit, .btn-delete {
@@ -296,6 +338,3 @@ table {
 .footer a:hover {
   text-decoration: underline;
 }
-
-
-
