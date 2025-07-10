@@ -55,6 +55,20 @@
         </div>
     </form>
 
+
+<% 
+  
+    if (admin != null && admin.equalsIgnoreCase("admin")) {
+%>
+    <div>
+      <button class="yellow-button">
+     	 <a href="adminPanel.jsp" style="text-decoration:none; color:black;">Back to Admin Panel</a>
+      </button>
+    </div>
+<% 
+    } 
+%>
+
     <table>
         <thead>
         <tr>

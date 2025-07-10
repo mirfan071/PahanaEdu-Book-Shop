@@ -3,13 +3,15 @@
 
 <%
     model.user u = (model.user) session.getAttribute("user");
+    String admin = (String) session.getAttribute("admin");
 
-    if (u == null) {
+    if (u == null && (admin == null || !"admin".equalsIgnoreCase(admin))) {
         response.sendRedirect("userLogin.jsp");
         return;
     }
-    String username = u.getUsername();
-    String role = u.getRole();
+
+    String username = (u != null) ? u.getUsername() : "admin";
+    String role = (u != null) ? u.getRole() : "admin";
 %>
 
 <!DOCTYPE html>
@@ -23,7 +25,13 @@
 
 <nav class="custom-navbar">
   <div class="nav-container">
-    <a class="brand" href="mainInterface.jsp">
+  
+
+  <a class="brand" href="<%= (admin != null && admin.equalsIgnoreCase("admin")) ? "adminPanel.jsp" : "mainInterface.jsp" %>"
+  	  title="<%= (admin != null && admin.equalsIgnoreCase("admin")) 
+            ? "Click to view Admin Panel" 
+            : "Click to view Dashboard" %>">
+  
       <img src="images/logo.png" alt="Logo" class="logo">
       <span>Pahana Edu Book Shop</span>
     </a>
